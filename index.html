@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join S.K. Fitness for affordable gym memberships and personalized fitness plans.">
+    <meta name="keywords" content="Gym, Fitness, Membership, Plans, Personal Trainer, Workout, Health">
+    <meta name="author" content="Umang Gupta">
+    <title>S.K. Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.1/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Element Animation */
+        .element {
+            opacity: 0;
+            animation: slide-left 3s forwards;
+            /* animation-timeline: scroll(); */
+        }
+
+        @media (max-width: 768px) {
+            .element {
+                animation: grow 3s forwards;
+                /* animation-timeline: scroll(); */
+            }
+        }
+
+        @keyframes grow {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+                scale: 0;
+            }
+
+            50% {
+                transform: scale(1.3);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-left {
+            0% {
+                transform: translateX(100%);
+                /* transform: scale(0); */
+                opacity: 0;
+            }
+
+            20% {
+                transform: translateX(-10%);
+                /* transform: scale(1); */
+                opacity: 0.5;
+            }
+
+            40% {
+                transform: translateX(0);
+                opacity: 0.8;
+            }
+
+            60% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            90% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .transition-all {
+            transition: all 0.5s ease;
+        }
+
+        /* Scroll-Based Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 2s ease-out, transform 1.5s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20%;
+            /* background-color: #dbeafe; */
+            /* margin: 0 auto; */
+            /* Light Blue */
+            /* border: 3px solid #1e3a8a; */
+            /* Blue Border */
+        }
+
+        .card {
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5%);
+            scale: 1.05;
+        }
+
+        .checkbox-style {
+            accent-color: #02ff0a;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-red-900">
+
+    <!-- Header -->
+    <header class="bg-red-900 sticky top-0 z-50 rounded-bl-2xl rounded-br-2xl m-0 text-gray-200 py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold">
+                <i class="fas fa-dumbbell"></i>
+                S.K. <span class="text-yellow-500">Fitness</span>
+            </h1>
+
+            <!-- Navigation -->
+            <nav class="flex gap-2 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
+                <a href="#home"
+                    class="bg-white text-black text-center w-full p-2 rounded-xl transition-all hover:text-white font-bold text-sm hover:bg-orange-400">Home</a>
+                <a href="#services"
+                    class="bg-white text-black text-center w-full p-2 rounded-xl transition-all hover:text-white font-bold text-sm hover:bg-orange-400">Services</a>
+                <!-- <a href="about.html"
+                        class="bg-white text-black text-center w-full p-2 rounded-xl transition-all hover:text-white font-bold text-sm hover:bg-orange-400">About</a> -->
+                <a href="#trainer"
+                    class="bg-white text-black text-center w-full p-2 rounded-xl transition-all hover:text-white font-bold text-sm hover:bg-orange-400">Contact</a>
+                <a href="#pricing"
+                    class="bg-white text-black text-center w-full p-2 rounded-xl transition-all hover:text-white font-bold text-sm hover:bg-orange-400">Pricing</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <img src="assets/images/banner.jpg" alt="banner" class="w-full h-auto rounded-tl-2xl rounded-tr-2xl" id="banner">
+    <section id="home"
+        class="bg-gradient-to-b from-yellow-300 to-yellow-600 text-gray-900 lg:py-20 pt-40 pb-4 lg:pb-0 px-4">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl lg:text-6xl font-bold">Achieve Your <span class="text-red-800">Fitness</span> Goals
+                </h1>
+
+                <p class="mt-4 text-lg lg:text-2xl">Join our gym today and start your journey to a healthier, stronger
+                    you.</p>
+                <a href="#try"
+                    class="inline-block bg-red-800 text-white py-2 px-6 rounded-full hover:bg-red-600 hover:scale-110 transition-all mt-6">
+                    <i class="animate-bounce fas fa-chevron-down mr-2 text-white"></i>
+                    Try & Join Now</a>
+            </div>
+            <img src="assets//images/choose-img.png" alt="background images"
+                class="element lg:ml-20 -mt-4 object-contain">
+            <!-- <div class="w-full md:w-1/2">
+                <img src="assets/images/gym.jpg" alt="Fitness"
+                class="element rounded-xl border-4 border-white w-full h-auto sm:mx-4 mt-10 shadow-lg">
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="pt-20 bg-gradient-to-b from-orange-500 to-orange-700 text-white">
+        <div class="container mx-auto py-20 px-6">
+            <h2 class="text-3xl font-bold text-center">Our <span class="text-yellow-300">Services</span></h2>
+            <p class="text-lg text-center">We offer a variety of services to help you achieve your fitness goals.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+
+                <!-- Personal Training Card -->
+                <div class="relative fade-in card">
+                    <img src="assets/images/personal-training.jpg" alt="Personal Training"
+                        class="rounded-xl w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
+                    <h3 class="absolute bottom-16 left-4 text-white font-bold text-xl z-10">Personal Training</h3>
+                    <p class="absolute bottom-5 left-4 text-white text-sm z-10">Get customized workout plans from
+                        professional trainers.</p>
+                </div>
+
+                <!-- Cardio Training Card -->
+                <div class="relative fade-in card">
+                    <img src="assets/images/cardio-training.jpg" alt="Cardio Training"
+                        class="rounded-xl w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
+                    <h3 class="absolute bottom-16 left-4 text-white font-bold text-xl z-10">Cardio Training</h3>
+                    <p class="absolute bottom-5 left-4 text-white text-sm z-10">Boost your heart health with our
+                        state-of-the-art equipment.</p>
+                </div>
+
+                <!-- Yoga & Pilates Card -->
+                <div class="relative fade-in card">
+                    <img src="assets/images/yoga-pilates.jpg" alt="Yoga & Pilates"
+                        class="rounded-xl w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
+                    <h3 class="absolute bottom-16 left-4 text-white font-bold text-xl z-10">Yoga & Pilates</h3>
+                    <p class="absolute bottom-5 left-4 text-white text-sm z-10">Find balance and flexibility with our
+                        guided
+                        sessions.</p>
+                </div>
+
+                <!-- Muscle Building Card -->
+                <div class="relative fade-in card">
+                    <img src="assets/images/muscle-building.jpg" alt="Muscle Building"
+                        class="rounded-xl w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
+                    <h3 class="absolute bottom-16 left-4 text-white font-bold text-xl z-10">Muscle Building</h3>
+                    <p class="absolute bottom-5 left-4 text-white text-sm z-10">Build muscles as fast as you can. Train
+                        under us!</p>
+                </div>
+
+                <!-- Relaxation Therapy Card -->
+                <div class="relative fade-in card">
+                    <img src="assets/images/relaxation-therapy.jpg" alt="Relaxation Therapy"
+                        class="rounded-xl w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
+                    <h3 class="absolute bottom-16 left-4 text-white font-bold text-xl z-10">Relaxation Therapy</h3>
+                    <p class="absolute bottom-5 left-4 text-white text-sm z-10">Unwind with our specialized recovery
+                        therapies.</p>
+                </div>
+
+                <!-- Strength Training Card -->
+                <div class="relative fade-in card">
+                    <img src="assets/images/strength-training.jpg" alt="Strength Training"
+                        class="rounded-xl w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
+                    <h3 class="absolute bottom-16 left-4 text-white font-bold text-xl z-10">Strength Training</h3>
+                    <p class="absolute bottom-5 left-4 text-white text-sm z-10">Build muscle with our advanced
+                        strength-training machines.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers & contact section-->
+    <section id="trainer" class="py-12 pb-20 bg-gradient-to-b from-blue-700 to-blue-900">
+        <div class="container mx-auto px-6 pt-20 sm:px-0">
+            <h2 class="text-4xl font-bold text-center text-white">Meet Our Trainers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-3 gap-12 sm:gap-10 mt-12">
+
+                <!-- First Trainer Card -->
+                <div class="bg-white p-2 pb-4 rounded-xl shadow-lg fade-in">
+                    <img src="assets/images/trainer1.jpg" alt="Trainer" class="rounded-xl w-full h-64 object-cover">
+                    <h3 class="text-2xl text-left font-bold mx-4 mt-4">Shri Kishan (Krishna) </h3>
+                    <p class="mx-4 my-1 text-left text-gray-600">Personal Trainer & Prop.</p>
+                    <ul class="mx-4 mt-2 text-gray-600 text-sm">
+                        <li>- Strength Training</li>
+                        <li>- Cardio Workouts</li>
+                        <li>- Rehabilitation</li>
+                    </ul>
+                    <blockquote
+                        class="mx-8 mt-4 font-serif italic border-l-4 border-red-900 rounded p-1 pl-4 text-gray-600 bg-gray-200 text-sm">
+                        "Kishan helped me lose 15 kg in 3 months with his personalized training!"
+                    </blockquote>
+                    <div class="flex justify-start space-x-4 mx-4 mt-4">
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="flex gap-4 w-full px-2 mt-4">
+                        <a href="#" class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
+                            <i class="fas fa-phone mr-2"></i>
+                            Contact</a>
+                        <a href="#"
+                            class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Whatsapp</a>
+                    </div>
+                </div>
+
+                <!-- Second Trainer Card with Recommendation -->
+                <div class="bg-white p-2 pb-4 rounded-xl shadow-lg fade-in">
+                    <img src="assets/images/trainer3.jpg" alt="Trainer" class="rounded-xl w-full h-64 object-cover ">
+                    <h3 class="text-2xl text-left font-bold mx-4 mt-4">Sushil Kumar</h3>
+                    <p class="mx-4 my-1 text-left text-gray-600">Nutritionist & Trainer</p>
+                    <ul class="mx-4 mt-2 text-gray-600 text-sm">
+                        <li>- Diet Planning</li>
+                        <li>- Weight Management</li>
+                        <li>- Healthy Recipes</li>
+                    </ul>
+                    <blockquote
+                        class="mx-8 mt-4 font-serif italic border-l-4 border-red-900 rounded p-1 pl-4 text-gray-600 bg-gray-200 text-sm">
+                        "Mark's diet plans are simple yet effective. I feel more energetic and healthier!"
+                    </blockquote>
+                    <div class="flex justify-start space-x-4 mx-4 mt-4">
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="flex gap-4 w-full px-2 mt-4">
+                        <a href="#" class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
+                            <i class="fas fa-phone mr-2"></i>
+                            Contact</a>
+                        <a href="#" class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Whatsapp</a>
+                    </div>
+                </div>
+
+                <!-- Third Trainer Card -->
+                <div class="bg-white p-2 pb-4 rounded-xl shadow-lg relative border-4 border-blue-400 fade-in">
+                    <div class="relative">
+                        <p
+                            class="absolute text-xs font-bold rounded-full py-1 px-3 text-white bg-blue-600 border-8 border-white float-right transform -translate-y-2 -translate-x-2">
+                            Recommended</p>
+                        <img src="assets/images/trainer2.jpg" alt="Trainer" class="rounded-xl w-full h-64 object-cover">
+                    </div>
+                    <h3 class="text-2xl text-left font-bold mx-4 mt-4">Rahul Soni</h3>
+                    <p class="mx-4 my-1 text-left text-gray-600">Professional Trainer & Body Builder</p>
+                    <ul class="mx-4 mt-2 text-gray-600 text-sm">
+                        <li>- Muscle Mass training</li>
+                        <li>- Personalized Routines</li>
+                    </ul>
+                    <details class="mx-4 mt-4">
+                        <summary
+                            class="text-blue-500 font-semibold text-lg cursor-pointer flex items-center space-x-2 transition-all duration-300 ease-in-out hover:text-blue-900">
+                            <span>Open</span>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </summary>
+                        <ul class="mt-2 text-gray-600 text-sm space-y-1 pl-6">
+                            <li>Free Monthly Body Check-ups</li>
+                            <li>Free Recommendations</li>
+                            <li>Nutrition Plan</li>
+                            <li>Diet Plans</li>
+                            <li>Customizable Workout Plans</li>
+                            <li>Online/Offline Consultation</li>
+                        </ul>
+                    </details>
+                
+                    <!-- <div class="flex justify-start space-x-4 mx-4 mt-4">
+                                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                                    </div> -->
+                    <div class="flex gap-4 w-full px-2 mt-4">
+                        <a href="#" class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
+                            <i class="fas fa-phone mr-2"></i>
+                            Contact
+                        </a>
+                        <!-- <a href="#"
+                                            class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
+                                            <i class="fab fa-whatsapp mr-2"></i> Whatsapp
+                                        </a> -->
+                        <a href="https://instagram.com/rahulsoni.in"
+                            class="bg-pink-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-pink-700">
+                            <i class="fab fa-instagram mr-2"></i>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gradient-to-b from-red-700 to-red-800 text-gray-700 ">
+        <center>
+            <p class="text-xl px-1 -translate-y-24 py-2 text-black text-center bg-white w-3/4 rounded-full ">
+                We offer simple Monthly Plans
+                also.</p>
+        </center>
+        <div class="container mx-auto md:mx-4 px-4">
+            <h2 class="text-3xl font-bold text-center text-white">Our Gym <br> Membership <span
+                    class="text-orange-400">Plans</span>
+            </h2>
+            <p class="text-lg px-4 text-white text-center mt-4">Choose a plan that fits your goals and budget.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                <fieldset class="bg-white py-8 rounded-xl border-4 border-gray-400 shadow-md text-center fade-in">
+                    <legend class="text-xl font-bold bg-gray-500 text-white p-2 w-1/2 text-center rounded-xl">Basic
+                    </legend>
+                    <p class="text-4xl font-bold mt-4">₹499/month</p>
+                    <ul class="mt-6 space-y-2">
+                        <li>Gym Access</li>
+                        <li>Cardio Classes</li>
+                        <li>Free Support</li>
+                        <li>Basic Training</li>
+                    </ul>
+                    <a href="#"
+                        class="animate-bounce inline-block bg-gray-300 text-black border-4 border-gray-500 font-bold py-2 px-4 rounded-full shadow-3xl mt-6">Get
+                        Started</a>
+                </fieldset>
+                <fieldset
+                    class="bg-white py-6 border border-4 border-blue-600 rounded-xl shadow-md text-center fade-in">
+                    <legend class="text-xl font-bold bg-blue-700 text-white p-2 w-1/2 text-center rounded-xl">Popular
+                    </legend>
+                    <p class="text-4xl font-bold mt-4">₹999/month</p>
+                    <ul class="mt-6 space-y-2">
+                        <li>
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>All Basic Features
+                        </li>
+                        <li>Personal Trainer</li>
+                        <li>Fitness Plan</li>
+                        <li>Group Classes</li>
+                    </ul>
+                    <a href="#"
+                        class="animate-bounce inline-block bg-blue-300 text-black border-4 border-blue-600 font-bold py-2 px-4 rounded-full shadow-3xl mt-6">Get
+                        Started</a>
+                </fieldset>
+                <fieldset
+                    class="bg-white py-6 border border-4 border-green-600 rounded-xl shadow-md text-center fade-in">
+                    <legend class="text-xl font-bold bg-green-700 text-white p-2 w-1/2 text-center rounded-xl">Elite
+                    </legend>
+                    <p class="text-4xl font-bold mt-4">₹2,999/month</p>
+                    <p class="text-green-600 font-bold">+ 30 Days Free</p>
+                    <ul class="mt-6 space-y-2">
+                        <li>
+                            <i class="fas fa-check-circle text-green-600 mr-2"></i> All Premium Features
+                        </li>
+                        <li>Nutrition Plan</li>
+                        <li>Priority Support</li>
+                        <li>
+                            <i class="fas fa-plus-circle text-green-600 mr-2"></i>Exclusive Workout Sessions
+                        </li>
+                    </ul>
+                    <a href="#"
+                        class="animate-bounce inline-block bg-green-300 text-black border-4 border-green-600 font-bold py-2 px-4 rounded-full shadow-3xl mt-6">Get
+                        Started</a>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <!-- address section -->
+    <section id="address" class="py-16 bg-gradient-to-b from-green-600 to-green-800 text-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 text-white">Visit <span class="text-red-900">Us</span></h2>
+            <p class="text-xl text-center text-white mb-8">We are located at Chauri Bazar, Uttar Pradesh, India.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Card for Address Info -->
+                <div class="p-8 bg-white shadow-md rounded-lg fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-4">
+                            <i class="fas fa-map-marker-alt text-3xl text-red-600"></i>
+                            <div>
+                                <p class="font-semibold">Address</p>
+                                <p>Chauri Bazar, Uttar Pradesh, India</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <i class="fas fa-phone text-3xl text-green-600"></i>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <p>+91 9876543210</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <i class="fas fa-envelope text-3xl text-blue-600"></i>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p>info@example.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Google Map -->
+                <div
+                    class="relative rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14308.448626869757!2d83.5848477!3d26.7856848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399204f8eab3458b%3A0x4dc86b6837a7bfb6!2sChauri%20Bazar%2C%20Uttar%20Pradesh%20273141!5e0!3m2!1sen!2sin!4v1692195711000!5m2!1sen!2sin&zoom=15&disableDefaultUI=true&maptype=roadmap&markers=color:red%7Clabel:C%7C26.7856848,83.5848477"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- working time section-->
+    <section aria-label="Working Hours" class="bg-black text-white overflow-hidden">
+        <div class="container mx-auto">
+            <!-- Laptop/Tablet View -->
+            <div class="hidden md:flex flex-row items-center">
+                <!-- Image on the Left -->
+                <div class="flex w-1/2 pl-8 py-4 justify-center element">
+                    <img src="assets/images/working-time.png" alt="Illustration showing working hours"
+                        class="w-full rounded-lg shadow-md max-w-[80%] object-contain">
+                </div>
+                <!-- Working Time Text and Schedule on the Right -->
+                <div class="w-1/2 p-6">
+                    <h1 class="text-5xl font-bold mb-6 pb-8 flex items-center">Working Hours</h1>
+                    <div class="bg-gray-900 px-10 rounded-lg border-l-4 border-green-500">
+                        <div class="py-4">
+                            <p class="text-xl font-bold">Sunday</p>
+                            <p class="text-lg text-gray-400">OFF / REST DAY</p>
+                        </div>
+                        <div class="py-4">
+                            <p class="text-xl font-bold">Monday - Saturday</p>
+                            <p class="text-lg text-gray-400">5:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile View -->
+            <div class="md:hidden flex-col items-center space-y-6 p-6 fade-in">
+                <div class="relative flex items-center w-full">
+                    <img src="assets/images/clock.png" alt="Illustration showing working hours"
+                        class="w-full h-auto rounded-lg shadow-md">
+                    <h1
+                        class="absolute top-1/2 transform -translate-y-1/2 right-1 text-white text-3xl md:text-5xl font-bold">
+                        Working Hours</h1>
+                </div>
+                <!-- Bottom Section: Schedule -->
+                <div class="w-full bg-gray-900 px-6 rounded-lg border-l-4 border-green-600">
+                    <div class="py-3 pt-4">
+                        <p class="text-xl">Sunday</p>
+                        <p class="text-sm text-gray-400">OFF / REST DAY</p>
+                    </div>
+                    <div class="py-3">
+                        <p class="text-xl">Monday - Saturday</p>
+                        <p class="text-sm text-gray-400">5:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- extras -->
+    <section id="try" class="py-16 bg-cover bg-center bg-black relative"
+        style="background-image: url('assets/images/calculate-img.png'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black opacity-30 "></div>
+
+        <div
+            class="relative mt-80 z-10 text-white text-lg font-semibold mx-10 border-4 border-gray-500 rounded-2xl px-8 py-6 shadow-lg hover:shadow-4xl transition-all lg:max-w-xl mx-auto">
+            <div class="absolute inset-0 rounded-2xl bg-black opacity-50 "></div>
+            <!-- Header Section -->
+            <h2 class="text-2xl font-bold text-center mb-6">Try Any Combination Daily at Home for Better Results</h2>
+
+            <!-- The list with checkboxes -->
+            <ol type="A" class="space-y-4 fade-in">
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="climber1">
+                    <label for="climber1">A. 20 Mountain climbers</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="wallSit1">
+                    <label for="wallSit1">B. 2 min. Wall Sit</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="burpees1">
+                    <label for="burpees1">C. 20 Burpees</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="jumpingJacks1">
+                    <label for="jumpingJacks1">D. 50 Jumping jacks</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="crunches1">
+                    <label for="crunches1">E. 20 Crunches</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="plank1">
+                    <label for="plank1">F. 1 Minute Plank</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="pushUps1">
+                    <label for="pushUps1">G. 15 Push Ups</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="burpees2">
+                    <label for="burpees2">H. 10 Burpees</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="wallSit2">
+                    <label for="wallSit2">I. 1 min Wall Sit</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="jumpingJacks2">
+                    <label for="jumpingJacks2">J. 60 Jumping Jacks</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="armCircle1">
+                    <label for="armCircle1">K. 15 sec. Arm circle</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="crunches2">
+                    <label for="crunches2">L. 10 Crunches</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="wallSit3">
+                    <label for="wallSit3">M. 3 min. Wall Sit</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="plank2">
+                    <label for="plank2">N. 1 min. Plank</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="burpees3">
+                    <label for="burpees3">O. 15 Burpees</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="pushUps2">
+                    <label for="pushUps2">P. 20 Push ups</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="climber2">
+                    <label for="climber2">Q. 25 Mountain Climbers</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="crunches3">
+                    <label for="crunches3">R. 15 Crunches</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="wallSit4">
+                    <label for="wallSit4">S. 1 Min. wall sit</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="climber3">
+                    <label for="climber3">T. 30 mountain Climbers</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="squats1">
+                    <label for="squats1">U. 30 Squats</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="jumpingJacks3">
+                    <label for="jumpingJacks3">V. 50 jumping jacks</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="pushUps3">
+                    <label for="pushUps3">W. 10 push ups</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="crunches4">
+                    <label for="crunches4">X. 30 Crunches</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="armCircle2">
+                    <label for="armCircle2">Y. 30 sec. arm circle</label>
+                </li>
+                <li class="flex items-center space-x-3 transition-transform transform hover:scale-105">
+                    <input type="checkbox" class="checkbox-style" id="plank3">
+                    <label for="plank3">Z. 2 min. plank</label>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-100 py-8 rounded-tl-2xl rounded-tr-2xl">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-4">
+                    <h3 class="text-2xl font-bold font-serif mb-1">Created By</h3>
+                    <p class="text-sm">Umang Gupta with ❤️</p>
+                </div>
+                <div class="bg-blue-200 text-blue-900 rounded-2xl p-4">
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-link"></i>
+                        Quick Links
+                    </h3>
+                    <ul class="space-y-4">
+                        <li><a href="#"
+                                class="block transition-all hover:text-white hover:underline hover:bg-blue-700 hover:rounded-full hover:px-10 hover:py-2">
+                                About Us
+                            </a></li>
+                        <li><a href="#"
+                                class="block transition-all hover:text-white hover:underline hover:bg-blue-700 hover:rounded-full hover:px-10 hover:py-2">
+                                Our Services
+                            </a></li>
+                        <li><a href="#"
+                                class="block transition-all hover:text-white hover:underline hover:bg-blue-700 hover:rounded-full hover:px-10 hover:py-2">
+                                Contact
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="bg-white text-gray-900 rounded-2xl p-4">
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#"
+                                class="block transition-all hover:text-white hover:bg-pink-500 hover:rounded-full hover:px-10 hover:py-3">
+                                <i class="fab fa-instagram mr-3"></i>
+                                Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block transition-all hover:text-white hover:bg-red-700 hover:rounded-full hover:px-10 hover:py-3">
+                                <i class="fab fa-youtube mr-3"></i>
+                                Youtube</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block transition-all hover:text-white hover:bg-blue-700 hover:rounded-full hover:px-10 hover:py-3">
+                                <i class="fab fa-facebook-f mr-3"></i>
+                                Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-6 text-center">
+                <p>© S.K. Fitness.<br> All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll-based animation
+        const elements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        elements.forEach(el => observer.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
