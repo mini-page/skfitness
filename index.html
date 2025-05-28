@@ -256,123 +256,95 @@
         </div>
     </section>
 
-    <!-- Trainers & contact section-->
+    <!-- Trainers & contact section -->
     <section id="trainer" class="py-12 pb-20 bg-gradient-to-b from-blue-700 to-blue-900">
-        <div class="container mx-auto px-6 pt-20 sm:px-0">
+        <div class="container mx-auto px-4 pt-20">
             <h2 class="text-4xl font-bold text-center text-white">Meet Our Trainers</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-3 gap-12 sm:gap-10 mt-12">
 
-                <!-- First Trainer Card -->
-                <div class="bg-white p-2 pb-4 rounded-xl shadow-lg fade-in">
-                    <img src="assets/images/trainer1.jpg" alt="Trainer" class="rounded-xl w-full h-64 object-cover">
-                    <h3 class="text-2xl text-left font-bold mx-4 mt-4">Shri Kishan (Krishna) </h3>
-                    <p class="mx-4 my-1 text-left text-gray-600">Personal Trainer & Prop.</p>
-                    <ul class="mx-4 mt-2 text-gray-600 text-sm">
-                        <li>- Strength Training</li>
-                        <li>- Cardio Workouts</li>
-                        <li>- Rehabilitation</li>
-                    </ul>
-                    <blockquote
-                        class="mx-8 mt-4 font-serif italic border-l-4 border-red-900 rounded p-1 pl-4 text-gray-600 bg-gray-200 text-sm">
-                        "Kishan helped me lose 15 kg in 3 months with his personalized training!"
-                    </blockquote>
-                    <div class="flex justify-start space-x-4 mx-4 mt-4">
-                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
-                    </div>
-                    <div class="flex gap-4 w-full px-2 mt-4">
-                        <a href="#" class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
-                            <i class="fas fa-phone mr-2"></i>
-                            Contact</a>
-                        <a href="#"
-                            class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Whatsapp</a>
+            <div class="grid grid-cols-1 gap-12 mt-12">
+                <!-- Unified Trainer Card -->
+                <div class="bg-white p-4 rounded-xl shadow-lg border-4 border-blue-400 w-full max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-stretch">
+
+                        <!-- Carousel Image Section -->
+                        <div
+                            class="md:w-1/3 w-full h-64 md:h-auto relative overflow-hidden rounded-xl md:rounded-l-xl md:rounded-r-none">
+                            <div id="carousel" class="w-full h-full relative">
+                                <img src="assets/images/kishan.jpeg" alt="Trainer Image 1"
+                                    class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+                                <img src="assets/images/kishan2.jpeg" alt="Trainer Image 2"
+                                    class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+                                <img src="assets/images/kishan3.jpeg" alt="Trainer Image 3"
+                                    class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+                            </div>
+                            <p
+                                class="absolute text-xs font-bold rounded-full py-1 px-2 text-white bg-blue-600 border-4 border-white -top-1 -left-1 z-10">
+                                Recommended
+                            </p>
+                        </div>
+
+
+                        <!-- Content Section -->
+                        <div class="md:w-2/3 md:pl-6 mt-4 md:mt-0 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold">Shree Kishan (Krishna)</h3>
+                                <p class="text-gray-600">Professional Trainer, Body Builder & Proprietor</p>
+
+                                <ul class="mt-2 text-gray-600 text-sm space-y-1">
+                                    <li>- Strength Training</li>
+                                    <li>- Cardio Workouts</li>
+                                    <li>- Rehabilitation</li>
+                                    <li>- Muscle Mass Training</li>
+                                    <li>- Personalized Routines</li>
+                                </ul>
+
+                                <details class="mt-4">
+                                    <summary
+                                        class="text-blue-500 font-semibold text-lg cursor-pointer flex items-center space-x-2 transition-all duration-300 ease-in-out hover:text-blue-900">
+                                        <span>More Info</span>
+                                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                                    </summary>
+                                    <ul class="mt-2 text-gray-800 bg-green-200 p-2 rounded-lg text-sm space-y-1 pl-6">
+                                        <li>Free Monthly Body Check-ups <i class="fas fa-check text-green-600"></i></li>
+                                        <li>Free Recommendations <i class="fas fa-check text-green-600"></i></li>
+                                        <li>Nutrition Plan <i class="fas fa-check text-green-600"></i></li>
+                                        <li>Diet Plans <i class="fas fa-check text-green-600"></i></li>
+                                        <li>Customizable Workout Plans <i class="fas fa-check text-green-600"></i></li>
+                                        <li>Online/Offline Consultation <i class="fas fa-check text-green-600"></i></li>
+                                    </ul>
+                                </details>
+
+                                <blockquote
+                                    class="mt-4 font-serif italic border-l-4 border-red-900 rounded p-1 pl-4 text-gray-600 bg-gray-200 text-sm">
+                                    "Kishan helped me lose 15 kg in 3 months with his personalized training!"
+                                </blockquote>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-start space-x-4 mt-4 text-gray-500 text-xl">
+                                    <a href="https://www.instagram.com/unstoppable__kishan" target="_blank"
+                                        class="hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.youtube.com/@sk_fitness0776" target="_blank"
+                                        class="hover:text-gray-900"><i class="fab fa-youtube"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100094665266655" target="_blank"
+                                        class="hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                                </div>
+
+                                <div class="flex gap-4 w-full mt-4">
+                                    <a href="tel:+918601348378"
+                                        class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
+                                        <i class="fas fa-phone mr-2"></i> Contact
+                                    </a>
+                                    <a href="https://wa.me/918601348378"
+                                        class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
+                                        <i class="fab fa-whatsapp mr-2"></i> Whatsapp
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-
-                <!-- Second Trainer Card with Recommendation -->
-                <div class="bg-white p-2 pb-4 rounded-xl shadow-lg fade-in">
-                    <img src="assets/images/trainer3.jpg" alt="Trainer" class="rounded-xl w-full h-64 object-cover ">
-                    <h3 class="text-2xl text-left font-bold mx-4 mt-4">Sushil Kumar</h3>
-                    <p class="mx-4 my-1 text-left text-gray-600">Nutritionist & Trainer</p>
-                    <ul class="mx-4 mt-2 text-gray-600 text-sm">
-                        <li>- Diet Planning</li>
-                        <li>- Weight Management</li>
-                        <li>- Healthy Recipes</li>
-                    </ul>
-                    <blockquote
-                        class="mx-8 mt-4 font-serif italic border-l-4 border-red-900 rounded p-1 pl-4 text-gray-600 bg-gray-200 text-sm">
-                        "Mark's diet plans are simple yet effective. I feel more energetic and healthier!"
-                    </blockquote>
-                    <div class="flex justify-start space-x-4 mx-4 mt-4">
-                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
-                    </div>
-                    <div class="flex gap-4 w-full px-2 mt-4">
-                        <a href="#" class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
-                            <i class="fas fa-phone mr-2"></i>
-                            Contact</a>
-                        <a href="#" class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Whatsapp</a>
-                    </div>
-                </div>
-
-                <!-- Third Trainer Card -->
-                <div class="bg-white p-2 pb-4 rounded-xl shadow-lg relative border-4 border-blue-400 fade-in">
-                    <div class="relative">
-                        <p
-                            class="absolute text-xs font-bold rounded-full py-1 px-3 text-white bg-blue-600 border-8 border-white float-right transform -translate-y-2 -translate-x-2">
-                            Recommended</p>
-                        <img src="assets/images/trainer2.jpg" alt="Trainer" class="rounded-xl w-full h-64 object-cover">
-                    </div>
-                    <h3 class="text-2xl text-left font-bold mx-4 mt-4">Rahul Soni</h3>
-                    <p class="mx-4 my-1 text-left text-gray-600">Professional Trainer & Body Builder</p>
-                    <ul class="mx-4 mt-2 text-gray-600 text-sm">
-                        <li>- Muscle Mass training</li>
-                        <li>- Personalized Routines</li>
-                    </ul>
-                    <details class="mx-4 mt-4">
-                        <summary
-                            class="text-blue-500 font-semibold text-lg cursor-pointer flex items-center space-x-2 transition-all duration-300 ease-in-out hover:text-blue-900">
-                            <span>Open</span>
-                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
-                        </summary>
-                        <ul class="mt-2 text-gray-600 text-sm space-y-1 pl-6">
-                            <li>Free Monthly Body Check-ups</li>
-                            <li>Free Recommendations</li>
-                            <li>Nutrition Plan</li>
-                            <li>Diet Plans</li>
-                            <li>Customizable Workout Plans</li>
-                            <li>Online/Offline Consultation</li>
-                        </ul>
-                    </details>
-                
-                    <!-- <div class="flex justify-start space-x-4 mx-4 mt-4">
-                                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
-                                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
-                                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
-                                    </div> -->
-                    <div class="flex gap-4 w-full px-2 mt-4">
-                        <a href="#" class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
-                            <i class="fas fa-phone mr-2"></i>
-                            Contact
-                        </a>
-                        <!-- <a href="#"
-                                            class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
-                                            <i class="fab fa-whatsapp mr-2"></i> Whatsapp
-                                        </a> -->
-                        <a href="https://instagram.com/rahulsoni.in"
-                            class="bg-pink-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-pink-700">
-                            <i class="fab fa-instagram mr-2"></i>
-                            Instagram
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -466,14 +438,14 @@
                             <i class="fas fa-phone text-3xl text-green-600"></i>
                             <div>
                                 <p class="font-semibold">Phone</p>
-                                <p>+91 9876543210</p>
+                                <p>+91 8601348378</p>
                             </div>
                         </li>
                         <li class="flex items-center space-x-4">
                             <i class="fas fa-envelope text-3xl text-blue-600"></i>
                             <div>
                                 <p class="font-semibold">Email</p>
-                                <p>info@example.com</p>
+                                <p>umanggupta5711@gmail.com</p>
                             </div>
                         </li>
                     </ul>
@@ -498,8 +470,8 @@
             <div class="hidden md:flex flex-row items-center">
                 <!-- Image on the Left -->
                 <div class="flex w-1/2 pl-8 py-4 justify-center element">
-                    <img src="assets/images/working-time.png" alt="Illustration showing working hours"
-                        class="w-full rounded-lg shadow-md max-w-[80%] object-contain">
+                    <img src="assets/images/clock.png" alt="Illustration showing working hours"
+                        class="w-full rounded-lg shadow-md max-w-[80%] object-contain scale-110">
                 </div>
                 <!-- Working Time Text and Schedule on the Right -->
                 <div class="w-1/2 p-6">
@@ -742,7 +714,133 @@
                 });
             });
         });
+
+        // Carousel functionality
+        const carouselImages = document.querySelectorAll('.carousel-image');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            carouselImages[currentIndex].classList.remove('opacity-100');
+            carouselImages[currentIndex].classList.add('opacity-0');
+            
+            currentIndex = (currentIndex + 1) % carouselImages.length;
+            
+            carouselImages[currentIndex].classList.remove('opacity-0');
+            carouselImages[currentIndex].classList.add('opacity-100');
+        }
+
+        setInterval(showNextImage, 2000); // Change image every 3 seconds
     </script>
 </body>
 
 </html>
+<!-- First Trainer Card
+                <div class="bg-white p-2 pb-4 rounded-xl shadow-lg fade-in">
+                    <img src="assets/images/trainer1.jpg" alt="Trainer" class="rounded-xl w-full h-64 object-cover">
+                    <h3 class="text-2xl text-left font-bold mx-4 mt-4">Shri Kishan (Krishna) </h3>
+                    <p class="mx-4 my-1 text-left text-gray-600">Personal Trainer & Prop.</p>
+                    <ul class="mx-4 mt-2 text-gray-600 text-sm">
+                        <li>- Strength Training</li>
+                        <li>- Cardio Workouts</li>
+                        <li>- Rehabilitation</li>
+                    </ul>
+                    <blockquote
+                        class="mx-8 mt-4 font-serif italic border-l-4 border-red-900 rounded p-1 pl-4 text-gray-600 bg-gray-200 text-sm">
+                        "Kishan helped me lose 15 kg in 3 months with his personalized training!"
+                    </blockquote>
+                    <div class="flex justify-start space-x-4 mx-4 mt-4">
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="flex gap-4 w-full px-2 mt-4">
+                        <a href="#" class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
+                            <i class="fas fa-phone mr-2"></i>
+                            Contact</a>
+                        <a href="#"
+                            class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Whatsapp</a>
+                    </div>
+                </div> -->
+
+<!-- Second Trainer Card with Recommendation -->
+<!-- <div class="bg-white p-2 pb-4 rounded-xl shadow-lg fade-in">
+                    <img src="assets/images/trainer3.jpg" alt="Trainer" class="rounded-xl w-full h-64 object-cover ">
+                    <h3 class="text-2xl text-left font-bold mx-4 mt-4">Sushil Kumar</h3>
+                    <p class="mx-4 my-1 text-left text-gray-600">Nutritionist & Trainer</p>
+                    <ul class="mx-4 mt-2 text-gray-600 text-sm">
+                        <li>- Diet Planning</li>
+                        <li>- Weight Management</li>
+                        <li>- Healthy Recipes</li>
+                    </ul>
+                    <blockquote
+                        class="mx-8 mt-4 font-serif italic border-l-4 border-red-900 rounded p-1 pl-4 text-gray-600 bg-gray-200 text-sm">
+                        "Mark's diet plans are simple yet effective. I feel more energetic and healthier!"
+                    </blockquote>
+                    <div class="flex justify-start space-x-4 mx-4 mt-4">
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="flex gap-4 w-full px-2 mt-4">
+                        <a href="#" class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
+                            <i class="fas fa-phone mr-2"></i>
+                            Contact</a>
+                        <a href="#" class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Whatsapp</a>
+                    </div>
+                </div> -->
+
+<!-- Third Trainer Card
+                <div class="bg-white p-2 pb-4 rounded-xl shadow-lg relative border-4 border-blue-400 fade-in">
+                    <div class="relative">
+                        <p
+                            class="absolute text-xs font-bold rounded-full py-1 px-3 text-white bg-blue-600 border-8 border-white float-right transform -translate-y-2 -translate-x-2">
+                            Recommended</p>
+                        <img src="assets/images/trainer2.jpg" alt="Trainer" class="rounded-xl w-full h-64 object-cover">
+                    </div>
+                    <h3 class="text-2xl text-left font-bold mx-4 mt-4">Shree Kishan (Krishna)</h3>
+                    <p class="mx-4 my-1 text-left text-gray-600">Professional Trainer & Body Builder</p>
+                    <ul class="mx-4 mt-2 text-gray-600 text-sm">
+                        <li>- Muscle Mass training</li>
+                        <li>- Personalized Routines</li>
+                    </ul>
+                    <details class="mx-4 mt-4">
+                        <summary
+                            class="text-blue-500 font-semibold text-lg cursor-pointer flex items-center space-x-2 transition-all duration-300 ease-in-out hover:text-blue-900">
+                            <span>Open</span>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </summary>
+                        <ul class="mt-2 text-gray-600 text-sm space-y-1 pl-6">
+                            <li>Free Monthly Body Check-ups</li>
+                            <li>Free Recommendations</li>
+                            <li>Nutrition Plan</li>
+                            <li>Diet Plans</li>
+                            <li>Customizable Workout Plans</li>
+                            <li>Online/Offline Consultation</li>
+                        </ul>
+                    </details>
+                
+                    <div class="flex justify-start space-x-4 mx-4 mt-4">
+                                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                                        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                                    </div> -->
+<!-- <div class="flex gap-4 w-full px-2 mt-4">
+                        <a href="tel:+918601348378" class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
+                            <i class="fas fa-phone mr-2"></i>
+                            Contact
+                        </a> -->
+<!-- <a href="#"
+                                            class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
+                                            <i class="fab fa-whatsapp mr-2"></i> Whatsapp
+                                        </a> -->
+<!-- <a href="https://instagram.com/rahulsoni.in"
+                            class="bg-pink-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-pink-700">
+                            <i class="fab fa-instagram mr-2"></i>
+                            Instagram
+                        </a>
+                    </div>
+                </div> -->
