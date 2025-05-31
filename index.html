@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.1/dist/cdn.min.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
     <style>
         html {
             scroll-behavior: smooth;
@@ -190,7 +192,7 @@
 
                 <p class="mt-4 text-lg lg:text-2xl">Join our gym today and start your journey to a healthier, stronger
                     you.</p>
-                <a href="#try"
+                <a href="#pricing"
                     class="inline-block bg-red-800 text-white py-2 px-6 rounded-full hover:bg-red-600 hover:scale-110 transition-all mt-6">
                     <i class="animate-bounce fas fa-chevron-down mr-2 text-white"></i>
                     Try & Join Now</a>
@@ -280,11 +282,11 @@
     <!-- Trainers & contact section -->
     <section id="trainer" class="py-12 pb-20 bg-gradient-to-b from-blue-700 to-blue-900">
         <div class="container mx-auto px-4 pt-20">
-            <h2 class="text-4xl font-bold text-center text-white">Meet Our Trainers</h2>
+            <h2 class="text-4xl font-bold text-center text-white">Meet Our Trainer</h2>
 
             <div class="grid grid-cols-1 gap-12 mt-12">
                 <!-- Unified Trainer Card -->
-                <div class="bg-white p-4 rounded-xl shadow-lg border-4 border-blue-400 w-full max-w-7xl mx-auto">
+                <div class="bg-white p-1 rounded-2xl shadow-lg border-4 border-blue-400 w-full max-w-7xl mx-auto">
                     <div class="flex flex-col md:flex-row items-stretch">
 
                         <!-- Carousel Image Section -->
@@ -309,10 +311,11 @@
 
 
                         <!-- Content Section -->
-                        <div class="md:w-2/3 md:pl-6 mt-4 md:mt-0 flex flex-col justify-between">
+                        <div class="md:w-2/3 md:pl-6 m-4 md:m-4 mt-4 md:mt-2 flex flex-col justify-between">
                             <div>
                                 <h3 class="text-2xl font-bold">Shree Kishan (Krishna)</h3>
-                                <p class="text-gray-600">Professional Trainer, Body Builder & Proprietor</p>
+                                <p class="text-gray-500 text-xs font-bold">Professional Trainer, Body Builder &
+                                    Proprietor</p>
 
                                 <ul class="mt-2 text-gray-600 text-sm space-y-1">
                                     <li>- Strength Training</li>
@@ -338,29 +341,29 @@
                                     </ul>
                                 </details>
 
-                                <blockquote
+                                <!-- <blockquote
                                     class="mt-4 font-serif italic border-l-4 border-red-900 rounded p-1 pl-4 text-gray-600 bg-gray-200 text-sm">
                                     "Kishan helped me lose 15 kg in 3 months with his personalized training!"
-                                </blockquote>
+                                </blockquote> -->
                             </div>
 
                             <div>
                                 <div class="flex justify-start space-x-4 mt-4 text-gray-500 text-xl">
                                     <a href="https://www.instagram.com/unstoppable__kishan" target="_blank"
-                                        class="hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                                        class="text-pink-500 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
                                     <a href="https://www.youtube.com/@sk_fitness0776" target="_blank"
-                                        class="hover:text-gray-900"><i class="fab fa-youtube"></i></a>
+                                        class="text-red-500 hover:text-red-700"><i class="fab fa-youtube"></i></a>
                                     <a href="https://www.facebook.com/profile.php?id=100094665266655" target="_blank"
-                                        class="hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                                        class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook"></i></a>
                                 </div>
 
                                 <div class="flex gap-4 w-full mt-4">
                                     <a href="tel:+918601348378"
-                                        class="bg-blue-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-blue-700">
+                                        class="bg-blue-600 text-white flex-1 text-center py-2 rounded-xl hover:bg-blue-700">
                                         <i class="fas fa-phone mr-2"></i> Contact
                                     </a>
                                     <a href="https://wa.me/918601348378"
-                                        class="bg-green-600 text-white flex-1 text-center py-2 rounded-lg hover:bg-green-700">
+                                        class="bg-green-600 text-white flex-1 text-center py-2 rounded-xl hover:bg-green-700">
                                         <i class="fab fa-whatsapp mr-2"></i> Whatsapp
                                     </a>
                                 </div>
@@ -396,8 +399,8 @@
                         <li>Free Support</li>
                         <li>Basic Training</li>
                     </ul>
-                    <a href="#"
-                        class="animate-bounce inline-block bg-gray-300 text-black border-4 border-gray-500 font-bold py-2 px-4 rounded-full shadow-3xl mt-6">Get
+                    <a href="upi://pay?pa=8601348378@ybl&pn=SK%20Fitness%20GYM&am=499&tn=Basic%20GYM%20access%20Payment%20/month&cu=INR"
+                        class="inline-block bg-gray-300 text-black border-4 border-gray-500 font-bold py-2 px-4 rounded-full shadow-3xl mt-6">Get
                         Started</a>
                 </fieldset>
                 <fieldset
@@ -413,8 +416,8 @@
                         <li>Fitness Plan</li>
                         <li>Group Classes</li>
                     </ul>
-                    <a href="#"
-                        class="animate-bounce inline-block bg-blue-300 text-black border-4 border-blue-600 font-bold py-2 px-4 rounded-full shadow-3xl mt-6">Get
+                    <a href="upi://pay?pa=8601348378@ybl&pn=SK%20Fitness%20GYM&am=999&tn=Popular%20GYM%20access%20Payment%20/month&cu=INR"
+                        class="inline-block bg-blue-300 text-black border-4 border-blue-600 font-bold py-2 px-4 rounded-full shadow-3xl mt-6">Get
                         Started</a>
                 </fieldset>
                 <fieldset
@@ -433,10 +436,20 @@
                             <i class="fas fa-plus-circle text-green-600 mr-2"></i>Exclusive Workout Sessions
                         </li>
                     </ul>
-                    <a href="#"
-                        class="animate-bounce inline-block bg-green-300 text-black border-4 border-green-600 font-bold py-2 px-4 rounded-full shadow-3xl mt-6">Get
+                    <a href="upi://pay?pa=8601348378@ybl&pn=SK%20Fitness%20GYM&am=2999&tn=Elite%20GYM%20access%20Payment%20/month&cu=INR"
+                        class="inline-block bg-green-300 text-black border-4 border-green-600 font-bold py-2 px-4 rounded-full shadow-3xl mt-6">Get
                         Started</a>
                 </fieldset>
+            </div>
+        </div>
+        <!-- Payment QR Modal -->
+        <div id="qrModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 hidden">
+            <div class="bg-white p-6 rounded-xl shadow-xl text-center relative max-w-sm w-full">
+                <button id="closeModal"
+                    class="absolute top-2 right-3 text-xl font-bold text-gray-600 hover:text-black">&times;</button>
+                <h3 class="text-xl font-bold mb-4 text-green-700">Scan to Pay</h3>
+                <div id="qrContainer" class="mb-4 flex justify-center"></div>
+                <p class="text-sm text-gray-500">Use any UPI app to scan this code.</p>
             </div>
         </div>
     </section>
@@ -455,30 +468,32 @@
                             <i class="fas fa-map-marker-alt text-3xl text-red-600"></i>
                             <div>
                                 <p class="font-semibold">Address</p>
-                                <p>Chauri Bazar, Uttar Pradesh, India</p>
+                                <p><a href="https://maps.app.goo.gl/VHU5eiQPTXyZsvN67" target="_blank"
+                                        class="text-red-600">Nand Nagar, (Chauri Bazar) Uttar Pradesh, India</a></p>
                             </div>
                         </li>
                         <li class="flex items-center space-x-4">
                             <i class="fas fa-phone text-3xl text-green-600"></i>
                             <div>
                                 <p class="font-semibold">Phone</p>
-                                <p>+91 8601348378</p>
+                                <p><a href="tel:+918601348378" class="text-green-600">+91 8601348378</a></p>
                             </div>
                         </li>
                         <li class="flex items-center space-x-4">
                             <i class="fas fa-envelope text-3xl text-blue-600"></i>
                             <div>
-                                <p class="font-semibold">Email</p>
-                                <p>umanggupta5711@gmail.com</p>
+                                <p class="font-semibold">Email Support</p>
+                                <p><a href="mailto:kishan860134@gmail.com"
+                                        class="text-blue-600">kishan860134@gmail.com</a></p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <!-- Google Map -->
                 <div
-                    class="relative rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+                    class="relative rounded-xl overflow-hidden shadow-lg transition duration-300">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14308.448626869757!2d83.5848477!3d26.7856848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399204f8eab3458b%3A0x4dc86b6837a7bfb6!2sChauri%20Bazar%2C%20Uttar%20Pradesh%20273141!5e0!3m2!1sen!2sin!4v1692195711000!5m2!1sen!2sin&zoom=15&disableDefaultUI=true&maptype=roadmap&markers=color:red%7Clabel:C%7C26.7856848,83.5848477"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14284.652174242327!2d82.258010!3d26.898806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin&zoom=17&disableDefaultUI=true&maptype=roadmap"
                         width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
@@ -754,6 +769,37 @@
         }
 
         setInterval(showNextImage, 2000); // Change image every 3 seconds
+
+        const isMobile = window.innerWidth < 768;
+        const modal = document.getElementById("qrModal");
+        const closeBtn = document.getElementById("closeModal");
+        const qrContainer = document.getElementById("qrContainer");
+
+        function handlePayment(upiUrl) {
+            if (isMobile) {
+                window.location.href = upiUrl;
+            } else {
+                modal.classList.remove("hidden");
+                qrContainer.innerHTML = "";
+                QRCode.toCanvas(document.createElement("canvas"), upiUrl, function (err, canvas) {
+                    if (!err) qrContainer.appendChild(canvas);
+                });
+            }
+        }
+
+        closeBtn.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+
+        // Hook buttons dynamically
+        document.querySelectorAll("[data-upi]").forEach(btn => {
+            btn.addEventListener("click", e => {
+                e.preventDefault();
+                const upiLink = btn.getAttribute("data-upi");
+                handlePayment(upiLink);
+            });
+        });
+
     </script>
 </body>
 
